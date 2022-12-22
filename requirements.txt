@@ -1,0 +1,4 @@
+tk
+ttkwidgets
+babel
+pynput
