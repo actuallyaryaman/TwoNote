@@ -65,7 +65,9 @@ class Toplevel1:
         top.configure(background="#d9d9d9")
         top.configure(highlightbackground="#d9d9d9")
         top.configure(highlightcolor="black")
-
+        self.curfocus=tk.StringVar()
+        self.curfocus.set(str(top.focus_get()))
+        self.curfocus.trace('w',lambda x:print("Work"))
         self.top = top
         self.menuSelectedButton = tk.StringVar()
 
@@ -143,6 +145,9 @@ class Toplevel1:
         self.TNotebook1.add(self.TNotebook1_t1, padding=3)
         self.TNotebook1.tab(0, text='''Page 1''', compound="left"
                 ,underline='''-1''', )
+        self.TNotebook1.bind('<Button>',lambda x:baseui_support.adpg() if((self.TNotebook1.index(self.TNotebook1.select()))==(baseui_support.pgcount-1)) else print(end =""))
+        self.TNotebook1.bind('<ButtonRelease>',lambda x:baseui_support.adpg() if((self.TNotebook1.index(self.TNotebook1.select()))==(baseui_support.pgcount-1)) else print(end =""))
+        self.TNotebook1.bind('<Double-Button-1>',lambda x:baseui_support.delpg() if((self.TNotebook1.index(self.TNotebook1.select()))!=(baseui_support.pgcount-1)) else print(end =""))
         self.TNotebook1_t1.configure(background="#d9d9d9")
         self.TNotebook1_t1.configure(highlightbackground="#d9d9d9")
         self.TNotebook1_t1.configure(highlightcolor="black")
@@ -160,6 +165,10 @@ class Toplevel1:
         self.TNotebook1_t3.configure(background="#d9d9d9")
         self.TNotebook1_t3.configure(highlightbackground="#d9d9d9")
         self.TNotebook1_t3.configure(highlightcolor="black")
+        self.TNotebook1_t3.bind('<FocusIn>',lambda x=None:print("Here"))
+        self.TNotebook1.select(2)
+        self.newid=self.TNotebook1.index(self.TNotebook1.select())
+        self.TNotebook1.select(0)
         self.Frame1 = tk.Frame(self.TNotebook1_t1)
         self.Frame1.place(relx=0.0, rely=0.0, relheight=1.011, relwidth=0.978)
         self.Frame1.configure(relief='groove')
