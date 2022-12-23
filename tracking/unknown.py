@@ -51,8 +51,6 @@ class Toplevel1:
         self.Canvas1.configure(selectbackground="#c4c4c4")
         self.Canvas1.configure(selectforeground="black")
 
-        self.Canvas1.bind('<Button>',lambda x:unknown_support.func())
-
 def start_up():
     unknown_support.main()
 

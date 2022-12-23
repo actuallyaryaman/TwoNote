@@ -18,5 +18,6 @@ def on_click(x, y, button, pressed):
 def on_move(x, y):
     global lx, ly
     if down:
-        unknown_support.w1.Canvas1.create_line(lx, ly, x, y, fill=color)
+        unknown_support.w1.Canvas1.create_line(lx, ly, x, y, fill=color, capstyle="round", smooth=True)
+        # unknown_support.w1.Canvas1.create_line(lx, ly, x, y, fill=color)
         lx, ly = x, y
