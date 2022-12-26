@@ -13,7 +13,7 @@ Contributions are always welcome!
 
 See [contributing.md](contributing.md) for ways to get started.
 
-Please adhere to this project's [`code of conduct`](blob\master\code_of_conduct.md).
+Please adhere to this project's [`code of conduct`]([blob\master\code_of_conduct.md](https://github.com/assguardiansofthegalaxy/PyNote/blob/main/blob/master/code_of_conduct.md)).
 
 
 ## Feedback
