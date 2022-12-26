@@ -10,6 +10,7 @@ import tkinter as tk
 import tkinter.ttk as ttk
 from tkinter.constants import *
 import os.path
+import tkinter.messagebox
 
 _script = sys.argv[0]
 _location = os.path.dirname(_script)
@@ -114,8 +115,7 @@ class Toplevel1:
         self.sub_menu123.add_cascade(compound='left', label='Theme'
                 ,menu=self.sub_menu1234, )
         self.sub_menu1234.add_radiobutton(value='Light'
-                ,variable=self.menuSelectedButton, compound='left', label='Light'
-)
+                ,variable=self.menuSelectedButton, compound='left', label='Light')
         self.sub_menu1234.add_radiobutton(value='Dark'
                 ,variable=self.menuSelectedButton, compound='left', label='Dark')
         self.sub_menu123.add_command(compound='left',label='Sync')
@@ -134,7 +134,7 @@ class Toplevel1:
                 ,foreground='#000000', tearoff=0)
         self.menubar.add_cascade(compound='left', label='Help'
                 ,menu=self.sub_menu123456, )
-        self.sub_menu123456.add_command(compound='left',label='About PyNote')
+        self.sub_menu123456.add_command(compound='left',label='About PyNote',command=lambda x=None:tk.messagebox.showinfo("About","(\ \n\ '\ \n \ '\   __________  \n / '|   ()_________)\n \ '/    \ ~~~~~ \ \n   \       \ ~~~~~ \ \n  ==).   \ _________\ \n  (_ _)      ()_________)\nCreated by the AOG group\nCredits:\nAsvin\nAryaman\nSanchit\nRepo:https://github.com/assguardiansofthegalaxy/PyNote.git\n"))
         self.sub_menu123456.add_command(compound='left',label='Open Help')
         _style_code()
         self.TNotebook1 = ttk.Notebook(self.top)
