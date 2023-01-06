@@ -1,5 +1,5 @@
 
-# Pynote
+# TwoNote
 
 A simple notebook application compatible with graphic tablets written in python
 
